@@ -67,7 +67,7 @@ module Inspec::Resources
         else
           cmd_string += " -S '#{@host},#{@port}"
         end
-        if @instance.nil?
+        if @instance.nil? || @instance == "MSSQLSERVER"
           cmd_string += "'"
         else
           cmd_string += "\\#{@instance}'"
