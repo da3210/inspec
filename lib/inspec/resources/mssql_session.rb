@@ -44,8 +44,6 @@ module Inspec::Resources
         @host = opts[:host] || "localhost"
         if opts.key?(:port)
           @port = opts[:port]
-        else
-          @port = "1433"
         end
       end
       @instance = opts[:instance]
